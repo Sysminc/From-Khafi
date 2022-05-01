@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+header{
+    height: auto;
+    background-image: url('https://www.transparenttextures.com/patterns/diagmonds.png'),                        url('#');
+    background-repeat: repeat, no-repeat;
+    background-size:auto, cover;
+    background-position: center center, top left;
+    font-family: sans-serif;
+    color: #051a00;
+}
+header video {
+  position:fixed;
+  top:50%;left:50%;
+  min-width:100%;
+  min-height:100%;
+  width:auto;
+  height:auto;
+  z-index:-100;
+  -webkit-transform:translateX(-50%) translateY(-50%);
+  transform:translateX(-50%) translateY(-50%);
+}
+.contText{
+    opacity: 0;
+    background-image: linear-gradient(
+	to right,
+	#462523 0,
+    #cb9b51 22%, 
+	#f6e27a 45%,
+	#f6f2c0 50%,
+	#f6e27a 55%,
+	#cb9b51 78%,
+	#462523 100%
+	);
+    -webkit-background-clip:text;
+    color: transparent;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Amatic SC', cursive;
+}
+
+h1{
+    font-size: 15vmin;
+    animation: textmove 5s ease-in-out;
+}
+h2{
+    font-size: 8vmin;
+    animation: textmove1 8s ease-in;
+}
+h3{
+    font-size: 5vmin;
+    animation: textmove2 8s ease-in;
+}
+h3 span{
+color: red;
+}
+
+@keyframes textmove {
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes textmove1 {
+    0% {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+}
+
+@keyframes textmove2 {
+    0% {
+        opacity: 1;
+        transform: translateX(-20px);
+    }
+}
+
+img{
+    width: 60vmin;
+    height: auto;
+}
+#content{
+    min-width:100vw;
+    min-height:100vh;
+    width:auto;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
