@@ -24,7 +24,7 @@ header video {
   transform:translateX(-50%) translateY(-50%);
 }
 .contText{
-    opacity: 0;
+    
     background-image: linear-gradient(
 	to right,
 	#462523 0,
@@ -47,10 +47,12 @@ h1{
     animation: textmove 5s ease-in-out;
 }
 h2{
+    opacity: 0;
     font-size: 8vmin;
     animation: textmove1 8s ease-in;
 }
 h3{
+    opacity: 0;
     font-size: 5vmin;
     animation: textmove2 8s ease-in;
 }
@@ -59,8 +61,8 @@ color: red;
 }
 
 @keyframes textmove {
-    50% {
-        opacity: 1;
+    0% {
+        transform: translateY(-10px);
     }
 }
 
@@ -81,6 +83,12 @@ color: red;
 img{
     width: 60vmin;
     height: auto;
+    animation: imgani 4s infinite linear;
+}
+@keyframes imgani {
+    50%{
+        transform: translateY(-4px);
+    } 
 }
 #content{
     min-width:100vw;

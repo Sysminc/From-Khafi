@@ -1,7 +1,22 @@
-var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-if (!isChrome){
-    $('#iframeAudio').remove()
-}
-else {
-    $('#playAudio').remove() // just to make sure that it will not have 2x audio in the background 
-}
+var source = "backsound/mubarak.mp3";
+var audio = document.createElement("audio");
+audio.load()
+audio.addEventListener("load", function() {
+  audio.play();
+}, true);
+audio.src = source;
+
+
+
+$("#playBtn").click(function() {
+  audio.play();
+});
+
+$("#pauseBtn").click(function() {
+  audio.pause();
+});
+
+$("#stopBtn").click(function() {
+  audio.pause();
+  audio.currentTime = 0;
+});
